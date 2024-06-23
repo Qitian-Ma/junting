@@ -8,12 +8,12 @@ col1, col2, col3 = st.columns([3, 3, 3])
 
 @st.experimental_fragment
 def upload_1():
-    uploaded_file_1 = st.file_uploader("Choose a file", type=["xlsx"], key='file_1')
+    uploaded_file_1 = st.file_uploader("Choose a file", type=["csv"], key='file_1')
 
     if uploaded_file_1:
         if uploaded_file_1.type is not None:
         
-            df_1 = pd.read_excel(uploaded_file_1, sheet_name=0)
+            df_1 = pd.read_csv(uploaded_file_1)
 
             st.write(df_1.head())
 
@@ -21,12 +21,12 @@ def upload_1():
 
 @st.experimental_fragment
 def upload_2():
-    uploaded_file_2 = st.file_uploader("Choose a file", type=["xlsx"], key='file2')
+    uploaded_file_2 = st.file_uploader("Choose a file", type=["csv"], key='file2')
 
     if uploaded_file_2:
         if uploaded_file_2.type is not None:
     
-            df_2 = pd.read_excel(uploaded_file_2, sheet_name=0)
+            df_2 = pd.read_csv(uploaded_file_2)
 
             st.write(df_2.head())
 
