@@ -13,7 +13,7 @@ def upload_1():
     if uploaded_file_1:
         if uploaded_file_1.type is not None:
         
-            df_1 = pd.read_csv(uploaded_file_1)
+            df_1 = pd.read_csv(uploaded_file_1, sep=";")
 
             st.write(df_1.head())
 
@@ -26,7 +26,7 @@ def upload_2():
     if uploaded_file_2:
         if uploaded_file_2.type is not None:
     
-            df_2 = pd.read_csv(uploaded_file_2)
+            df_2 = pd.read_csv(uploaded_file_2, sep=";")
 
             st.write(df_2.head())
 
